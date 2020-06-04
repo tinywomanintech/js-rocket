@@ -1,10 +1,34 @@
+body{
+	font-family: 'helvetica', 'arial', sans-serf;
+}
+
 .left{
-    background-color: #f7d0cb;
+    background: #f7d0cb ;
     position: fixed;
     width: 50%;
     height: 100%;
-    top: 0;
-    left: 0;
+	top: 0;
+	left: 0;
+}
+
+.interface{
+	text-align: center;
+	padding: 20px ;
+}
+
+a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase ;
+	transition: color 300ms;
+}
+
+a:hover{
+	color: 	#ead61c;
 }
 
 .right{
@@ -152,27 +176,64 @@ body {
     height: 100%;
 }
 
+.nervous{
+	position: absolute;
+	bottom: 100px;
+	left: 45%;
+	background: url('../images/im-nervous.png') no-repeat 0 0;
+	width: 200px;
+	height: 100px;
+	margin-left: -180px;
+	display: none;
+}
+
+.nervous.show{
+	display: block;
+}
+
+.cant-wait{
+	position: absolute;
+	bottom: 100px;
+	right: 120px;
+	background: url('../images/cant-wait.png') no-repeat 0 0;
+	width: 200px;
+	height: 100px;
+	display: none;
+}
+
+.cant-wait.show{
+	display: block;
+}
+
 .rocket{
     position: absolute;
     left: 50%;
-    bottom: 0px;
-    width: 99px;
-    height: 191px;
+    bottom: -0px;
+    width: 132px;
+    height: 136px;
     margin-left: -50px;
-    background: url('../images/rocket-state1.png') no-repeat 0 0;
+    background: url('../images/rocket-state2.png') no-repeat 0 0;
     transition: bottom 10000ms;
 }
 
 /* rocket bg image*/
 body.body-state2 .rocket{
-    background-image: url('../images/rocket-state2.png') ;
+	background-image: url('../images/rocket-state2.png') ;
 }
-body.body-state3 .rocket,
+body.body-state3 .rocket{
+	background-image: url('../images/rocket-state3.png')
+}
 body.body-state4 .rocket{
-    background-image: url('../images/rocket-state3.png')
+	background-image: url('../images/rocket-state4.png');
+	bottom: -10px;
+    width: 132px;
+    height: 136px;
 }
 body.body-state5 .rocket{
-    background-image: url('../images/state5.png')
+	background-image: url('../images/rocket-state5.png');
+	bottom: -10px;
+    width: 115px;
+    height: 136px;
 }
 
 
